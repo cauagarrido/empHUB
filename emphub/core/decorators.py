@@ -1,4 +1,4 @@
-# emphub/core/decorators.py
+
 from functools import wraps
 from flask import request, jsonify
 from emphub.core.supabase_client import supabase

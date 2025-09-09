@@ -1,4 +1,4 @@
-# emphub/api/groups.py
+
 from flask import Blueprint, request, jsonify
 from emphub.core.supabase_client import supabase
 from emphub.core.decorators import token_required

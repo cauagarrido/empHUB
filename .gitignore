@@ -1,0 +1,33 @@
+# Arquivos de Segredos e Configuração de Ambiente
+# Nunca envie suas senhas e chaves de API para o repositório!
+.env
+
+# Ambiente Virtual
+# Contém todas as bibliotecas instaladas e não deve ser versionado.
+venv/
+env/
+
+# Cache e Arquivos Gerados pelo Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configurações de IDEs e Editores de Código
+# Ignora arquivos de configuração específicos do seu ambiente de desenvolvimento.
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Pasta 'instance' do Flask
+# Usada para configurações que não devem ser versionadas.
+instance/
+
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de Teste e Cobertura de Código
+.coverage
+.pytest_cache/

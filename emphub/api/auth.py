@@ -1,8 +1,8 @@
-# emphub/api/auth.py
+
 from flask import Blueprint, request, jsonify
 from emphub.core.supabase_client import supabase
 
-# Cria um Blueprint. O primeiro argumento é o nome do blueprint, o segundo é o nome do módulo.
+
 auth_bp = Blueprint('auth', __name__)
 
 @auth_bp.route('/register', methods=['POST'])

@@ -1,4 +1,4 @@
-# emphub/api/projects.py
+
 from flask import Blueprint, request, jsonify
 from emphub.core.supabase_client import supabase
 from emphub.core.decorators import token_required
@@ -8,7 +8,7 @@ projects_bp = Blueprint('projects', __name__)
 @projects_bp.route('/<int:group_id>/projects', methods=['GET'])
 @token_required
 def get_projects(current_user, group_id):
-    # Em produção: verificar se o usuário pertence ao grupo group_id
+    
     try:
         res = supabase.table('projects').select('*').eq('group_id', group_id).execute()
         return jsonify(res.data), 200
@@ -39,7 +39,7 @@ def create_project(current_user, group_id):
 def update_project_status(current_user, project_id):
     data = request.get_json()
     new_status = data.get('status')
-    # Adicionar validação de status
+    
     try:
         res = supabase.table('projects').update({'status': new_status}).eq('id', project_id).execute()
         return jsonify(res.data[0]), 200

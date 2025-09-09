@@ -1,4 +1,4 @@
-# emphub/utils.py
+
 import string
 import random
 from emphub.core.supabase_client import supabase
@@ -12,6 +12,6 @@ def generate_unique_code(length=8):
             if not response.data:
                 return code
         except Exception as e:
-            # Lida com possíveis erros de banco de dados e evita loop infinito
+            
             print(f"Erro ao verificar código único: {e}")
-            return None # Retorna None em caso de erro
+            return None 
