@@ -2,5 +2,7 @@ Flask
 python-dotenv
 supabase
 Flask-Cors
+Flask-JWT-Extended
 Werkzeug
 gunicorn
+bcrypt
