@@ -1,21 +1,12 @@
 services:
-  # Define um serviço web para o nosso backend
   - type: web
     name: emphub-backend
-    # Aponta para o ambiente Docker que acabamos de definir
-    env: docker
-    # O Render irá automaticamente construir o Dockerfile encontrado no repositório
-    
-    # Define as variáveis de ambiente necessárias para a aplicação.
-    # É MUITO IMPORTANTE usar "Secret Files" ou "Environment Groups" no Render
-    # para armazenar os valores reais de forma segura.
+    runtime: docker
+    plan: free   # ou starter, dependendo do seu plano
     envVars:
       - key: SUPABASE_URL
-        fromSecret: true # Indica que o valor virá dos segredos do Render
+        value: https://pbcplcxasovlliscdthv.supabase.co
       - key: SUPABASE_KEY
-        fromSecret: true
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBiY3BsY3hhc292bGxpc2NkdGh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcxODA2NTYsImV4cCI6MjA3Mjc1NjY1Nn0.jK8i73zS06p9Ymt7vslBQkhNDE__txfaj6JNjC_UTug
       - key: JWT_SECRET_KEY
-        fromSecret: true
-      # Adicione a seguinte variável para garantir que o Python não use buffer nos logs
-      - key: PYTHONUNBUFFERED
-        value: "1"
+        value: ia4u/UwSPS5bC2l4hyrqrd7B2a9+U1Vs42HAqGHCJMHdzme+9yWr7pBsaMQOTbqvESCZnkAOzvupf8Oa7I9YnA==
