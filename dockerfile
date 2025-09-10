@@ -39,4 +39,4 @@ EXPOSE 10000
 # Ele inicia o Gunicorn, aponta para o seu arquivo `app.py` e a instância `app` do Flask.
 # --bind 0.0.0.0:10000 : Permite que o servidor aceite conexões de fora do contêiner.
 # app:app : Refere-se ao arquivo `app.py` e à variável `app = Flask(__name__)` dentro dele.
-CMD ["gunicorn", "--bind", "0.0.0.0:10000", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:10000", "app:run"]
